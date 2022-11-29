@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Lobster&family=Poppins&family=Rajdhani&family=Rubik+Dirt&family=Satisfy&display=swap');
+
+
+.container{
+    height: 715px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(/src/components/Greetings/colores.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    
+    
+  
+    
+}
+
+
+.h1-container{
+    font-family: 'Satisfy', cursive;
+    font-size: 52px;
+    color:#000;
+    margin-right: 1.3em;
+   
+    
+    
+}
+
+
+.paraText {
+    margin-top: .5em;
+    font-size: 52px;
+}
+
+
+.logoGreen{
+    width: 250px;
+    margin-right: 4.4em;
+}

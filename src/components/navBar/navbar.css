@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Lobster&family=Poppins&family=Rajdhani&family=Rubik+Dirt&display=swap');
+
+
+
+
+.navbar { 
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(225, 230, 226, 0.532);
+    height: 65px;
+    border-bottom: 1px solid #000;
+    align-items: center;
+   
+    
+}
+
+
+.navbar-ul{
+    list-style-type: none;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    
+}
+
+.nav-link:hover{
+    border-bottom:1px solid rgb(172, 214, 20);
+}
+
+
+.imgPlanta { 
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+
+}
+
+

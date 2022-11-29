@@ -1,0 +1,22 @@
+
+
+
+.listProd{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 980px;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg,rgb(213, 107, 255),rgb(227, 121, 250),rgb(55, 11, 70),black );
+
+
+}
+
+
+
+
+
+img{
+    width: 11rem;
+}
