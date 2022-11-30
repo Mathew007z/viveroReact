@@ -1,7 +1,7 @@
 import "./item.css"
 import Avatar from "../Avatar/Avatar"
 import ItemList from "../ItemList/ItemList"
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 
 
@@ -20,11 +20,6 @@ const Item = ({id, nombre, precio, imagen}) =>{
     const buttonDecrement = () => {
         setContador(contador-1);
     }
-
-    useEffect(()=> {
-        console.log('El componente se ejecuto')
-    },[contador])
-    
     
 
     return (

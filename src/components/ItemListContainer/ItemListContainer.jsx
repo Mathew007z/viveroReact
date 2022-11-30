@@ -1,33 +1,32 @@
 import "./itemlistcontainer.css"
 import Item from "../Item/Item";
-import {productos} from "./productos";
+import React, {useState,useEffect} from 'react';
 
 
 
 
-
-
-
+ 
 
 
 
 
 const ItemListContainer = () => {
 
-    // Container de mis productos con logica de negocio
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+       const data = fetch('./data.json')
+        data.then((res) => res.json())
+        .then((obj) => setPosts(obj))
+    }, []);
 
 
-        const promesa = new Promise ((resolve) => {
-            resolve(productos)
-        })
-        promesa.then((res)=>{
-        console.log(res)
-        })
+
 
 
     return (
         <div className="listProd">
-           {productos.map((prod)=>
+           {posts.map((prod)=>
             <Item
             key={prod.id}
             nombre={prod.nombre}
@@ -38,6 +37,8 @@ const ItemListContainer = () => {
         </div>
     ) 
 }
+
+
 
 
 
