@@ -18,7 +18,7 @@ const Item = ({data}) =>{
         <p className="paraGP">${data.precio}</p>
         <img src={data.imagen} alt={data.id} className="imgCard"/>
         <div className="buttonContainer">
-        <Link to={`Item/${data.id}`} className="buttonHand">Ver Detalle</Link>
+        <Link to={`/item/${data.id}`} className="buttonHand">Ver Detalle</Link>
         </div>
         {/* <p className="contador">Agregar Al carrito <br></br>{contador}</p> */}
         </ItemList>
