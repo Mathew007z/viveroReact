@@ -18,7 +18,7 @@ export default function App (){
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route exact path="/ItemListContainer" element={<ItemListContainer/>}/>
-                    <Route exact path="/item/:id" element={<ItemId/>}/>
+                    <Route exact path="/ItemListContainer/item/:id" element={<ItemId/>}/>
                 </Routes>
             <Footer/>
             </BrowserRouter>
