@@ -1,10 +1,10 @@
  import navLogo from "../navBar/logoSinFondo.png"
  
- import "./greetings.css"
+ import "./home.css"
 
 
 
-function Greetings () {
+function Home () {
 
     return (
         <>
@@ -19,4 +19,4 @@ function Greetings () {
 
 }
 
-export default Greetings
+export default Home;

@@ -1,36 +1,24 @@
 import "./item.css"
-import Avatar from "../Avatar/Avatar"
 import ItemList from "../ItemList/ItemList"
-import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 
 
 
 
 
-const Item = ({id, nombre, precio, imagen}) =>{
+const Item = ({data}) =>{
 
-    const [contador, setContador] = useState(0);
 
-    // button increased
-    const buttonAumento = () => {
-        setContador(contador+1)
-    }
-    // Button decrement
-    const buttonDecrement = () => {
-        setContador(contador-1);
-    }
     
 
     return (
         <ItemList>
-        <Avatar/>
-        <p className="paraGP">{nombre}</p>
-        <p className="paraGP">${precio}</p>
-        <img src={imagen} alt={id} className="imgCard"/>
+        <p className="paraGP">{data.nombre}</p>
+        <p className="paraGP">${data.precio}</p>
+        <img src={data.imagen} alt={data.id} className="imgCard"/>
         <div className="buttonContainer">
-        <button onClick={buttonDecrement} className="buttonHand">Quitar</button>
-        <button onClick={buttonAumento} className="buttonHand">Agregar</button>
+        <Link to={`Item/${data.id}`} className="buttonHand">Ver Detalle</Link>
         </div>
         {/* <p className="contador">Agregar Al carrito <br></br>{contador}</p> */}
         </ItemList>

@@ -1,7 +1,7 @@
 import "./navbar.css";
 import Cart from "../CartWidget/CartWidget"
 import ImgLogo from "../navBar/logoSinFondo.png"
-// import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 // Navbar
@@ -18,17 +18,17 @@ import ImgLogo from "../navBar/logoSinFondo.png"
       <img src={ImgLogo} alt="hoja" className="imgPlanta"/>
       <ul className="navbar-ul">
           <li>
-            <a href="/" className="nav-link">Inicio</a>
+            <Link to="/" className="nav-link">Inicio</Link>
           </li>
       </ul>
       <ul className="navbar-ul">
           <li>
-            <a href="/" className="nav-link">Nosotros</a>
+            <Link to="/nosotros" className="nav-link">Nosotros</Link>
           </li>
       </ul>
       <ul className="navbar-ul">
           <li>
-            <a href="/" className="nav-link">Productos</a>
+            <Link to="/ItemListContainer" className="nav-link">Productos</Link>
           </li>
       </ul>
       <Cart/>

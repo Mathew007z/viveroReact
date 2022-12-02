@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-image: url(/src/components/Greetings/colores.jpg);
+    background-image: url(/src/components/Home/colores.jpg);
     background-position: center;
     background-repeat:no-repeat;
     background-size: cover;
