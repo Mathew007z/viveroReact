@@ -15,7 +15,7 @@ import {Link} from "react-router-dom"
 
   return <> <div className="navbar">
     
-      <img src={ImgLogo} alt="hoja" className="imgPlanta"/>
+      <Link to="/"><img src={ImgLogo} alt="hoja" className="imgPlanta"/></Link>
       <ul className="navbar-ul">
           <li>
             <Link to="/" className="nav-link">Inicio</Link>
