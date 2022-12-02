@@ -24,10 +24,9 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`/data/data.json/${id}`)
+        fetch('../data/data.json')
         .then((res) => res.json())
-        .then(setProd(prod))
-        console.log(prod)
+        .then((data)=>setProd(data.find((item)=> item.id === parseInt(id))))
     },[id])
 
 

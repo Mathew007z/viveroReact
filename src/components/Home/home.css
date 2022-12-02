@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Lobster&family=Poppins&family=Rajdhani&family=Rubik+Dirt&family=Satisfy&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .container{
     height: 715px;
@@ -39,3 +39,38 @@
     width: 250px;
     margin-right: 4.4em;
 }
+
+.section {
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    background: linear-gradient(45deg,rgb(237, 255, 244),rgb(192, 243, 227),rgb(208, 95, 43),black );
+}
+
+.box2{
+    border: 1.5px solid rgb(210, 105, 255);
+    padding: 70px 20px 70px 20px ;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 1.7em;
+    background: linear-gradient(45deg,rgb(36, 37, 36),rgb(224, 248, 240),rgb(181, 225, 217),black );
+    
+    
+}
+
+.title2{
+    font-size: 22px;
+    font-family: 'Varela Round', sans-serif;
+    
+}
+
+.title1{
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    margin-left: 2em;
+
+}
+
