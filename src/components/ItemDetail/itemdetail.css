@@ -1,0 +1,46 @@
+
+
+
+.detail-container{
+    border: 1px solid #000;
+    padding: 50px 60px 50px 60px;
+    border-radius: 50px;
+    background-color: #f7dafd;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+}
+
+
+.title-detail{
+    text-align: center;
+    font-size: 35px;
+}
+
+
+.detail-price{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1.5em;
+}
+
+.buttonHand2{
+    
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #000;
+    margin-left: 1em;
+    
+}
+
+.contador2{
+    text-align: center;
+    margin-top: 2em;
+    font-size: 20px;
+    display: block;
+    
+}
+
+.imgF{
+    width: 120px;
+    margin-left: 1.2em;
+}

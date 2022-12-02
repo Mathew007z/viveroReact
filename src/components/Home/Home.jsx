@@ -1,5 +1,6 @@
  import navLogo from "../navBar/logoSinFondo.png"
  import banner2 from "../Home/ahorro.svg"
+ import {Link} from "react-router-dom"
  
  import "./home.css"
 
@@ -21,6 +22,7 @@ function Home () {
                 </div>
                 <div className="frase">
                     <h2 className="title1">Increibles promociones en el mes de Diciembre</h2>
+                    <Link to="/ItemListContainer"><button className="buttonOff">Ofertas!</button></Link>
                 </div>
                 
 

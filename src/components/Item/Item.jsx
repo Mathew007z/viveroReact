@@ -20,7 +20,6 @@ const Item = ({data}) =>{
         <div className="buttonContainer">
         <Link to={`/item/${data.id}`} className="buttonHand">Ver Detalle</Link>
         </div>
-        {/* <p className="contador">Agregar Al carrito <br></br>{contador}</p> */}
         </ItemList>
     ) 
 }

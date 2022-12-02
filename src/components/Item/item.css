@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 
 .contador { 
     text-align: center;
@@ -22,6 +24,7 @@
    margin-bottom: 2em;
    text-decoration: none;
    color: #000;
+   font-family: 'Varela Round', sans-serif;
    
    
 
@@ -30,8 +33,8 @@
 
 
 .imgCard{
-        margin-left: 3.4em;
-        width: 130px;
+        margin-left: 3em;
+        width: 135px;
         height: 105px;
        
 }
@@ -42,5 +45,6 @@
     margin-bottom: 1.5em;
     font-size: 20px;
     margin-top: .9em;
+    
     
 }
