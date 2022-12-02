@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-       fetch('./data.json')
+       fetch('/data/data.json')
         .then((res) => res.json())
         .then((obj) => setPosts(obj))
     }, []);

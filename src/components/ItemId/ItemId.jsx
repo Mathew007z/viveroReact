@@ -9,7 +9,7 @@ const ItemId = () => {
     const [prod , setProd] = useState({})
 
     useEffect(() => {
-        fetch(`./data.json/${id}`)
+        fetch(`/data/data.json/${id}`)
         .then((res) => res.json())
         .then(setProd)
        
