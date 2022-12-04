@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Lobster&family=Poppins&family=Rajdhani&family=Rubik+Dirt&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 
 
@@ -8,9 +8,9 @@
     justify-content: space-evenly;
     background-color: rgba(225, 230, 226, 0.532);
     height: 65px;
-    border-bottom: 1px solid #000;
     align-items: center;
-    background: linear-gradient(45deg,rgb(74, 240, 138),rgb(152, 218, 197),rgb(79, 251, 97),rgb(133, 153, 127));
+    background-color: #fff;
+    border-bottom: 1px solid #000;
    
     
 }
@@ -24,15 +24,16 @@
 .nav-link{
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    font-family: 'Kanit', sans-serif;
+    font-family:'Varela Round', sans-serif;
     font-weight: bold;
+    
     
 }
 
 .nav-link:hover{
-    border-bottom:1px solid rgb(172, 214, 20);
+    border-bottom:1px solid #000;
 }
 
 

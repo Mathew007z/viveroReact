@@ -5,16 +5,6 @@ import {useParams} from 'react-router-dom'
 
 
 
-// const item = [
-//     {
-//        id:1,
-//        nombre:"Santiago",
-//        localidad:"Argentina",
-//        sexo:"Masculino" ,
-//        imagen:"../assets/florDeLoto.png"
-//     }
-// ]
-
 
 
 const ItemDetailContainer = () => {
@@ -28,7 +18,7 @@ const ItemDetailContainer = () => {
         // Devuelve un number
         fetch('../data/data.json')
         .then((res) => res.json())
-        .then((data)=>setProd(data.find((item)=> item.id === parseInt(id))))
+        .then((data)=>setProd(data.find((item) => item.id === parseInt(id))))
     },[id])
 
 
@@ -49,8 +39,21 @@ export default ItemDetailContainer
 
 
 
+// const item = [
+//     {
+//        id:1,
+//        nombre:"Santiago",
+//        localidad:"Argentina",
+//        sexo:"Masculino" ,
+//        imagen:"../assets/florDeLoto.png"
+//     }
+// ]
 
 
+
+
+
+// Promesa Mockeada; 
 
 
 

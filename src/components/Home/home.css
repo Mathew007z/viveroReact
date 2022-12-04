@@ -2,25 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .container{
-    height: 715px;
+    height: 720px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/src/components/Home/colores.jpg);
-    background-position: center;
-    background-repeat:no-repeat;
-    background-size: cover;
-    flex-direction: column;
+    background-color: rgb(176, 255, 229);
     
-    
-  
-    
+
 }
 
 
 .h1-container{
     font-family: 'Varela Round', sans-serif;
-    font-size: 42px;
+    font-size: 44px;
     color:#000;
     margin-bottom: 1.5em;
    
@@ -31,7 +25,7 @@
 
 .paraText {
     margin-top: .5em;
-    font-size: 52px;
+    font-size: 35px;
 }
 
 
@@ -42,12 +36,12 @@
 }
 
 .section {
-    height: 600px;
+    height: 580px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row-reverse;
-    background: linear-gradient(45deg,rgb(74, 240, 138),rgb(152, 218, 197),rgb(79, 251, 97),rgb(133, 153, 127) );
+    background-color: #fff;
 }
 
 .box2{
@@ -72,6 +66,7 @@
     font-size: 40px;
     font-family: 'Varela Round', sans-serif;
     margin-left: 2em;
+    margin-bottom: 1.5em;
 
 }
 
@@ -86,10 +81,17 @@
 
 .buttonOff{
   
-    padding: 15px 100px 15px 100px;
+    padding: 20px 120px 20px 120px;
     background: linear-gradient(45deg,rgb(36, 37, 36),rgb(224, 248, 240),rgb(181, 225, 217),black );
     border: 1px solid rgb(9, 8, 4);
     border-radius: 50px;
     cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
 
+}
+
+
+.plant{
+    width: 450px;
 }

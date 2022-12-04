@@ -1,5 +1,6 @@
 import "./cartwidget.css"
-import ImgCart from "../navBar/bag.svg"
+import ImgCart from "../../assets/bag.svg"
+import {Link} from 'react-router-dom'
 
 
 
@@ -8,7 +9,7 @@ function Cart () {
 
 return (
         <div className="divImg">
-            <img src={ImgCart} alt="cart" className="cart" />
+            <Link to="/cart"><img src={ImgCart} alt="cart" className="cart"/></Link>
             <p className="paragraphImg">0</p>
         </div>
 )
