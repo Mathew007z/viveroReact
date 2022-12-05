@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import "./itemdetail.css"
+import { Link } from 'react-router-dom';
 
 
 
@@ -24,8 +25,8 @@ function ItemDetail ({prod}) {
 
 
    return(
-
-    <div className="detail-container">
+      <>
+   <div className="detail-container">
       <div className="detail-item-cont">
          <h3 className="title-detail">{prod.nombre}</h3>
          <img className="imgF" src={prod.imagen} alt={prod.id}/>
@@ -34,7 +35,12 @@ function ItemDetail ({prod}) {
          <button onClick={buttonAument} className='buttonHand2'> + </button>
          <p className='contador2'>Cantidad:{contador}</p>
       </div>
-    </div>
+      </div>
+      <div className='button-back'>
+         <Link to="/productos"><button className='button-back-prod'> Atrás</button></Link>
+      </div>
+      </>
+  
 
    )
    

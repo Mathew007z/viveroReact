@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error from './components/Error/Error'
 import Cart from './components/Cart/Cart'
+import Nosotros from './components/Nosotros/Nosotros'
 
 
 
@@ -21,9 +22,11 @@ export default function App (){
                     <Route exact path="/" element={<Home/>}/>
                     <Route exact path="/productos" element={<ItemListContainer/>}/>
                     <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
+                    <Route exact path="/nosotros" element={<Nosotros/>}/>
                     <Route exact path="/cart" element={<Cart/>}/>
                     <Route path='*' element={<Error/>}/>
                 </Routes>
+                
             <Footer/>
             </BrowserRouter>
         </>

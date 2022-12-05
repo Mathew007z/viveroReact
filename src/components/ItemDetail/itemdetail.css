@@ -7,12 +7,14 @@
     border-radius: 50px;
     background-color: #f7dafd;
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin-right: 13em;
 }
 
 
 .title-detail{
     text-align: center;
     font-size: 35px;
+    margin-bottom: 1em;
 }
 
 
@@ -29,6 +31,8 @@
     background-color: transparent;
     border: 1px solid #000;
     margin-left: 1em;
+    color: #000;
+    font-size: 1.2em;
     
 }
 
@@ -42,5 +46,18 @@
 
 .imgF{
     width: 120px;
-    margin-left: 1.2em;
+    margin-left: 2em;
+}
+
+
+
+.button-back-prod{
+    padding: 20px 60px 20px 60px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    font-size: 20px;
+    background-color: #f7dafd;
+    margin-right: 2em;
+    margin-top: 22em;
+    cursor: pointer;
 }

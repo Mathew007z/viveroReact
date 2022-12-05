@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(176, 255, 229);
+    background-color: rgb(78, 89, 85);
     
 
 }
@@ -15,7 +15,7 @@
 .h1-container{
     font-family: 'Varela Round', sans-serif;
     font-size: 44px;
-    color:#000;
+    color:rgb(221, 229, 221);
     margin-bottom: 1.5em;
    
     
