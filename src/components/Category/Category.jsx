@@ -38,10 +38,10 @@ import {Link} from 'react-router-dom'
                         <>
                             <div className='div2' key={id}>
                             <h2 className='title-card'>{nombre}</h2>
-                            <img src={imagen} alt={imagen} className='img'/>
+                            <img src={imagen} alt={imagen} className='imgCategory'/>
                             <p className='paragraph-price'>${precio}</p>
-                            <div className="buttonContainer">
-                            <Link to={`/item/${data.id}`} className="buttonHand">Ver Detalle</Link>
+                            <div className="button--23">
+                            <Link to={`/item/${data.id}`} className="buttonHand-24">Ver Detalle</Link>
                             </div>
                             </div>
                         

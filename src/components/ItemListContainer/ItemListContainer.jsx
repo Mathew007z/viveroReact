@@ -21,9 +21,9 @@ const ItemListContainer = () => {
 
 
     return (
-        <>
-         <ItemList data={data}/>
-        </>
+        <div className="listProd">
+         <ItemList data={data} />
+        </div>
        
     ) 
 }

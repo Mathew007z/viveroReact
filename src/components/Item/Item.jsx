@@ -20,8 +20,8 @@ const Item = ({ data }) =>{
                         <p className="paraGP">{data.nombre}</p>
                         <p className="paraGP">{data.precio}</p>
                         <img src={data.imagen} alt={data.id} className="imgCard"/>
-                        <div className="buttonContainer">
-                        <Link to={`/item/${data.id}`} className="buttonHand">Ver Detalle</Link>
+                        <div className="buttonCont">
+                        <Link to={`/item/${data.id}`} className="buttonHand3">Ver Detalle</Link>
                         </div>
                     </div>
                 }

@@ -3,9 +3,13 @@
 
 
  function ItemList ({ data }) { 
-   <div>
-   {data.map(data => <Item data={data} key={data.id} />)}
- </div>
+   return(
+
+      <div className="card">
+      {data.map(data => <Item data={data} key={data.id} />)}
+      </div>
+   )
+
  }
 
  export default ItemList;

@@ -8,12 +8,12 @@
 
 
 
-.buttonContainer  { 
+.buttonCont  { 
     display: flex;
     justify-content: center;
 }
 
-.buttonHand{
+.buttonHand3{
    margin-left: .5em;
    padding: 10px 15px 10px 15px;
    margin-top: 2em;
