@@ -1,6 +1,6 @@
 import "./itemlistcontainer.css"
-import Item from "../Item/Item";
 import React, {useState,useEffect} from 'react';
+import ItemList from '..//ItemList/ItemList'
 
 
 
@@ -8,12 +8,12 @@ import React, {useState,useEffect} from 'react';
 
 const ItemListContainer = () => {
 
-    const [posts, setPosts] = useState([])
+    const [data, setData] = useState([])
 
     useEffect(() => {
        fetch('/data/data.json')
         .then((res) => res.json())
-        .then((obj) => setPosts(obj))
+        .then((obj) => setData(obj))
     }, []);
 
 
@@ -21,14 +21,10 @@ const ItemListContainer = () => {
 
 
     return (
-        <div className="listProd">
-           {posts.map((prod)=>
-            <Item data = {prod}
-             key = {prod.id}
-           
-            />
-           )}
-        </div>
+        <>
+         <ItemList data={data}/>
+        </>
+       
     ) 
 }
 

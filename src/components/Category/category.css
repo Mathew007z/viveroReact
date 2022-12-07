@@ -1,0 +1,76 @@
+/* Import font family */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+
+
+.container-cards{
+    background: linear-gradient(45deg,rgb(213, 107, 255),rgb(227, 121, 250),rgb(55, 11, 70),black );
+    height: 1200px;
+
+
+}
+
+.cards-category{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.div2{
+    width: 18%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #9d00ff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 4em 0 4em 2em;
+    transition: 0.2 ease;
+    height:370px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7dafd;
+    justify-content: space-evenly;
+
+}
+
+.paragraph-price{
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+
+.title-card{
+    text-align: center;
+}
+
+
+.img{
+    margin-left: 1.5em;
+}
+
+
+.buttonHandler{
+    padding: 20px;
+    background-color:#f7dafd;
+    border: 1px solid #000;
+    font-size: 16px;
+    font-family:'Varela Round', sans-serif;
+    margin-left: 2em;
+    margin-top: 2em;
+    cursor: pointer;
+   
+
+}
+
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

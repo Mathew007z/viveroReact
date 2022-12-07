@@ -33,6 +33,11 @@ import {Link} from "react-router-dom"
               <Link to="/productos" className="nav-link">Productos</Link>
             </li>
         </ul>
+        <ul className="navbar-ul">
+            <li>
+              <Link to="/category" className="nav-link">Ofertas</Link>
+            </li>
+        </ul>
         <Cart/>
   </div>
   </>
