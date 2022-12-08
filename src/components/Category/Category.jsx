@@ -44,7 +44,6 @@ import {Link} from 'react-router-dom'
                             <Link to={`/item/${data.id}`} className="buttonHand-24">Ver Detalle</Link>
                             </div>
                             </div>
-                        
                          </>
                     )
                 })}

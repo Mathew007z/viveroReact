@@ -1,53 +1,57 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 
-.contador { 
-    text-align: center;
-}
 
 
-
-.buttonCont  { 
+.contain-card{
+    width: 18%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #9d00ff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 4em 0 4em 2em;
+    transition: 0.2 ease;
+    height: 350px;
     display: flex;
+    background-color: #f7dafd;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+    margin-top: 4em;
+    
+    
 }
-
-.buttonHand3{
-   margin-left: .5em;
-   padding: 10px 15px 10px 15px;
-   margin-top: 2em;
-   border: 1px solid #000;
-   background-color: rgb(255, 196, 196);
-   border-radius: 50px;
-   margin-left: 1.2em;
-   margin-bottom: 2em;
-   text-decoration: none;
-   color: #000;
-   font-family: 'Varela Round', sans-serif;
-   
-   
-
-   
-}
-
 
 .imgCard{
-        margin-left: 3em;
-        width: 135px;
-        height: 105px;
-       
+    width: 120px;
+    height: 120px;
 }
-
 
 .paraGP{
-    text-align: center;
-    margin-bottom: 1.5em;
-    font-size: 20px;
-    margin-top: .9em;
-    
+    margin: 1em;
+    font-family:'Varela Round', sans-serif;
+}
+
+.buttonCont{
+    margin-left: .5em;
+    padding: 10px 15px 10px 15px;
+    margin-top: 2em;
+    border: 1px solid #000;
+    background-color: rgb(255, 196, 196);
+    border-radius: 50px;
+    margin-left: 1.2em;
+    margin-bottom: 2em;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Varela Round', sans-serif;
     
 }
 
 
-
+.buttonHand3{
+    text-decoration: none;
+    color: #000;
+}
