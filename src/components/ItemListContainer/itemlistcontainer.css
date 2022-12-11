@@ -1,14 +1,27 @@
 
-
+/* Import font-family */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .listProd{
-    
-  
-    background: linear-gradient(45deg,rgb(213, 107, 255),rgb(227, 121, 250),rgb(55, 11, 70),black );
-    
-
+            background-image: url(/src/assets/hotsale.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          
+            
+            
 
 }
 
 
 
+.img-hot-sale{
+    width: 400px;
+    margin-bottom: 10em;
+    margin-top: 5em;
+   
+    
+}

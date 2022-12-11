@@ -5,50 +5,66 @@
         "id": 1,
         "nombre": "Flor de Loto",
         "precio": 2000,
-        "imagen":"../assets/florDeLoto.png"
+        "imagen":"../assets/florDeLoto.png",
+        "cantidad": 1
         },  
         {
         "id": 2,
         "nombre": "Rosa",
         "precio": 1400,
-        "imagen":"../assets/rosesinfondo.png"
+        "imagen":"../assets/rosesinfondo.png",
+        "cantidad" : 1
         },
         {
         "id": 3,
         "nombre": "Girasol",
         "precio": 3000,
-        "imagen":"../assets/girasolsinfondo.png"
+        "imagen":"../assets/girasolsinfondo.png",
+        "cantidad": 1
         },
         {
         "id": 4,
         "nombre": "Margarita",
         "precio": 1000,
-        "imagen":"../assets/margarita.png"
+        "imagen":"../assets/margarita.png",
+        "cantidad": 1
         },
          {
         "id": 5,
         "nombre": "Rosa China",
         "precio": 1200,
-        "imagen":"../assets/rosChina.png"
+        "imagen":"../assets/rosChina.png",
+        "cantidad": 1
         },
         {
         "id": 6,
         "nombre": "Manzanero",
         "precio": 4500,
-        "imagen":"../assets/manzano.png"
+        "imagen":"../assets/manzano.png",
+        "cantidad": 1
+
         },
         {
         "id": 7,
         "nombre": "Rosa Blanca",
         "precio": 1000,
-        "imagen":"../assets/rosaBlanca.png"
+        "imagen":"../assets/rosaBlanca.png",
+        "cantidad": 1
         },
         {
         "id": 8,
         "nombre": "Tulipan",
         "precio": 1000,
-        "imagen":"../assets/tulipan1.png"
-        }]
+        "imagen":"../assets/tulipan1.png",
+        "cantidad": 1
+        },
+        {
+              "id": 9,
+              "nombre": "Tulipan",
+              "precio": 1000,
+              "imagen":"../assets/tulipan1.png",
+              "cantidad": 1
+       }]
 
 
 

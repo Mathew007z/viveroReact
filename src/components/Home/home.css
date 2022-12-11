@@ -1,24 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Lobster&family=Poppins&family=Rajdhani&family=Rubik+Dirt&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Varela+Round&display=swap');
 
 .container{
-    height: 720px;
+    height: 850px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background-color: rgb(161, 214, 195);
+    background-image: url(/src/assets/back-plant.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     
-
 }
 
 
-.h1-container{
-    font-family: 'Varela Round', sans-serif;
-    font-size: 44px;
-    color:rgb(0, 0, 0);
-    margin-bottom: 1.5em;
+.box1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
    
-    
+}
+
+
+.descuento{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 40px;
+    padding: 40px 60px 40px 60px;
+    background-color: rgb(253, 230, 200);
+    border-radius: 100px;
     
 }
 
@@ -36,24 +47,23 @@
 }
 
 .section {
-    height: 580px;
+    height: 1400px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     flex-direction: row-reverse;
-    background-color: #fff;
+    background-image: url(/src/assets//navidadReal.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+
 }
 
-.box2{
-    border: 1.5px solid #000;
-    padding: 70px 20px 70px 20px ;
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    margin-right: 1.7em;
-    background: linear-gradient(45deg,rgb(36, 37, 36),rgb(224, 248, 240),rgb(181, 225, 217),black );
-    
-    
+
+.box1{
+    margin-bottom: 15em;
+    margin-right: 3em;
 }
 
 .title2{
@@ -63,9 +73,9 @@
 }
 
 .title1{
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Varela Round', sans-serif;
-    margin-left: 2em;
+    margin-left: 5em;
     margin-bottom: 1.5em;
 
 }
@@ -75,21 +85,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 30em;
+   
 }
 
 
 .buttonOff{
   
     padding: 20px 120px 20px 120px;
-    background: linear-gradient(45deg,rgb(36, 37, 36),rgb(224, 248, 240),rgb(181, 225, 217),black );
-    border: 1px solid rgb(9, 8, 4);
+    background-color: rgb(253, 230, 200);
+    border: 2px solid rgb(64, 101, 41);
     border-radius: 50px;
     cursor: pointer;
     font-family: 'Varela Round', sans-serif;
     font-size: 20px;
+    margin-left: 4em;
 
 }
+
 
 
 .plant{
@@ -98,4 +111,15 @@
 
 img{
     width: 11rem;
+}
+
+.reno{
+    width:450px;
+    margin-bottom: 7em;
+}
+
+.vivero{
+    margin-bottom: 1em;
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
 }

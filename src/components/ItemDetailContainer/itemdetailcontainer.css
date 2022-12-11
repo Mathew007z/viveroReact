@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    background: linear-gradient(45deg,rgb(213, 107, 255),rgb(227, 121, 250),rgb(55, 11, 70),black );
+    background-image: url(/src/assets/petalos.jpeg);
+    background-position: center;
     
 }

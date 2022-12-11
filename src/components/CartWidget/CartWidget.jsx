@@ -10,7 +10,7 @@ function Cart () {
 return (
         <div className="divImg">
             <Link to="/cart"><img src={ImgCart} alt="cart" className="cart"/></Link>
-            <p className="paragraphImg">0</p>
+            <p className="paragraphImg">2</p>
         </div>
 )
 

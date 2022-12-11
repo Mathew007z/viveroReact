@@ -1,11 +1,12 @@
 .error404{
-    height: 500px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/src/assets/404err.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color:#fee241;
+    background: rgb(251,227,63);
+    background: linear-gradient(90deg, rgba(251,227,63,1) 0%, rgba(255,195,235,1) 29%, rgba(190,255,238,1) 100%);
+}
 
+.icon-error{
+    width: 450px;
 }

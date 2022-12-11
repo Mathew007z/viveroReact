@@ -11,11 +11,11 @@ const ItemDetailContainer = () => {
     
   
     const [prod , setProd] = useState([])
-    // useParams devuelve un string
+    // useParams return a string
     const { id } = useParams();
 
     useEffect(() => {
-        // Devuelve un number
+        // return a number
         fetch('../data/data.json')
         .then((res) => res.json())
         .then((data)=>setProd(data.find((item) => item.id === parseInt(id))))

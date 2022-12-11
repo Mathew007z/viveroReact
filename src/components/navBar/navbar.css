@@ -1,7 +1,14 @@
+
+
+
+/* Import the URL FONTS-FAMILY  */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Lobster&family=Poppins&family=Rajdhani&family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 
+
+
+/* Navbar css  */
 
 .navbar { 
     display: flex;
@@ -9,7 +16,7 @@
     background-color: rgba(225, 230, 226, 0.532);
     height: 65px;
     align-items: center;
-    background-color: #fff;
+    background-color:  rgb(253, 230, 200);
     border-bottom: 1px solid #000;
    
     

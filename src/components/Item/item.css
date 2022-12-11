@@ -1,3 +1,5 @@
+
+/* Import font-family */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 
@@ -7,7 +9,7 @@
     width: 18%;
     min-width: 250px;
     padding: 10px 12px;
-    border: 1px solid #9d00ff;
+    border: 1px solid #ff87bb;
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
@@ -15,7 +17,7 @@
     transition: 0.2 ease;
     height: 350px;
     display: flex;
-    background-color: #f7dafd;
+    background-color: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,7 +29,7 @@
 
 .imgCard{
     width: 120px;
-    height: 120px;
+    height: 115px;
 }
 
 .paraGP{
@@ -40,9 +42,8 @@
     padding: 10px 15px 10px 15px;
     margin-top: 2em;
     border: 1px solid #000;
-    background-color: rgb(255, 196, 196);
+    background-color: rgb(255, 200, 200);
     border-radius: 50px;
-    margin-left: 1.2em;
     margin-bottom: 2em;
     text-decoration: none;
     color: #000;
@@ -54,4 +55,5 @@
 .buttonHand3{
     text-decoration: none;
     color: #000;
+
 }

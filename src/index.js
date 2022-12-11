@@ -5,15 +5,15 @@ import App from "./App"
 
 
 
-// Seleccionando root
+
+// Select the  root
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
 
 root.render(
-  <>
-    <App/>
-  </>
+
+        <App/>
 );
 
 

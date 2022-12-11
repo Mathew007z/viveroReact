@@ -7,11 +7,9 @@ import {Link} from "react-router-dom"
 // Navbar
 
 
-
-
  export function Navbar () { 
 
-  // Renderizando navbar
+  // Rendering navbar
 
   return <>
   
@@ -35,7 +33,7 @@ import {Link} from "react-router-dom"
         </ul>
         <ul className="navbar-ul">
             <li>
-              <Link to="/category" className="nav-link">Ofertas</Link>
+              <Link to="/category" className="nav-link">Filtros</Link>
             </li>
         </ul>
         <Cart/>

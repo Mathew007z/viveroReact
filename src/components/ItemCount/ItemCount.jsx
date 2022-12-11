@@ -1,33 +1,53 @@
-// import './itemcount.css';
-// import {useState} from 'react';
-
-
-//  const ItemCount = ({stock, onAdd}) => {
-//                                     // Valor inicial
-//     const [contador, setContador] = useState(1); 
-
-//     const sumar = () => contador < stock && setContador(contador + 1)
-//     const restar = () => contador > 1 && setContador(contador - 1)
-
-//     const agregarProducto = () => {
-//          onAdd(contador)
-//     }
+import './itemcount.css';
+import {useState} from 'react';
+// import { useCartContext } from '../../Context/CartContext';
 
 
 
 
 
-//   return (
-//     <>
-//     <button onClick={sumar} className='btn_contador'>+</button>
-//         {contador}
-//     <button onClick={restar} className='btn_contador'>-</button>
+const ItemCount = ( { cantidad, onAdd } ) => {
 
-//     <button className='btn-principal' onClick={agregarProducto}>añadir al carrito</button>    
-// </>
-//   )
-// }
+
+    const [contador , setContador] = useState(1)
 
 
 
-// export default ItemCount;
+        const buttonAument = () => {
+        setContador(contador +1)
+        }
+
+
+        const buttonDecrement = () => {
+        contador > 0 ? setContador(contador -1) : setContador(0);
+        }
+
+
+
+        const agregarProduct = () => {
+          onAdd(contador)
+
+        }
+
+        
+
+
+
+  return (
+    <>
+            <div className='count-contain'>
+                <button onClick={buttonDecrement} className='buttonHand2'>-</button>
+                <button onClick={buttonAument} className='buttonHand2'>+</button>
+                <p className='count-time'>Cantidad : {contador}</p>
+            </div>
+            <button className='buttonCount' onClick={agregarProduct}>Añadir al carrito</button>    
+    </>
+  )
+    
+}
+
+
+
+
+
+export default ItemCount;
