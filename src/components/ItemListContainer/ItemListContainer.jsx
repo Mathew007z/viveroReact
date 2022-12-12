@@ -27,6 +27,7 @@ const ItemListContainer = () => {
             <div>
                 <img src={HotSale} alt={HotSale} className="img-hot-sale"/>     
                 <img src={HotSale}  alt={HotSale} className="img-hot-sale"/>  
+                <img src={HotSale}  alt={HotSale} className="img-hot-sale"/>  
             </div>
          
          <ItemList data={data} />

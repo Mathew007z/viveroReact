@@ -8,18 +8,12 @@ const CartProvider = ( {children} ) => {
 
     const [cart, setCart] = useState([]);
 
-
-
-
     // Here , would be the logic that will be used to configure the cart.
 
     // ClearCart
     const clearCart = () => setCart([]);
-
-
     // InCart
     const isInCart = (id) => cart.find(prod => prod.id === id) ? true : false;
-
     // Remove
     const removeProduct = (id) => setCart(cart.filter(prod => prod.id !== id));
 
@@ -34,11 +28,6 @@ const CartProvider = ( {children} ) => {
         }
 
     }
-
-
-
-
-
 
 
 

@@ -14,6 +14,7 @@ import {Link} from 'react-router-dom'
             return curDate.category === catItem;
         })
         setData(result)
+
     }
     
 
@@ -51,5 +52,6 @@ import {Link} from 'react-router-dom'
            
         )
 }
+
 
 export default Category;
