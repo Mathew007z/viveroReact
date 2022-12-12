@@ -54,3 +54,11 @@
     cursor: pointer;
 }
 
+.contain-buttons{
+    display: flex;
+}
+
+.button-back-prod-2{
+    background-color: rgb(255, 208, 255);
+}
+

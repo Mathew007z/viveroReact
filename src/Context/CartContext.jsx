@@ -10,6 +10,14 @@ const CartProvider = ( {children} ) => {
 
     // Here , would be the logic that will be used to configure the cart.
 
+    // Total Price
+    const totalPrice = () => {
+        return cart.reduce((acc, prod) => acc += (prod.cantidad * prod.precio), 0)
+    }
+    // Count product
+    const cantidadItem = () =>{
+        return cart.reduce((acc, prod) => acc += prod.cantidad, 0)
+    }
     // ClearCart
     const clearCart = () => setCart([]);
     // InCart
@@ -19,6 +27,7 @@ const CartProvider = ( {children} ) => {
 
     // put product
     const addProduct = (item, cantidad) => {
+        alert('Se agrego al Carrito!')
         if(isInCart(item.id)){
             setCart(cart.map(prod =>{
                 return prod.id === item.id ? {...prod, cantidad: prod.cantidad + cantidad } : prod
@@ -31,13 +40,17 @@ const CartProvider = ( {children} ) => {
 
 
 
+
+
     return (
         <CartContext.Provider value={{
             cart,
             clearCart,
             addProduct,
             isInCart,
-            removeProduct
+            removeProduct,
+            cantidadItem,
+            totalPrice
 
         }}>
             {children}

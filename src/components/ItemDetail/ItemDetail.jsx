@@ -18,8 +18,7 @@ function ItemDetail ( { prod } ) {
         addProduct(prod , contador);
       
     }
-    console.log(prod)
-
+ 
    return(
       <>
    <div className="detail-container">
@@ -27,18 +26,21 @@ function ItemDetail ( { prod } ) {
          <h3 className="title-detail">{prod.nombre}</h3>
          <img className="imgF" src={prod.imagen} alt={prod.id}/>
          <p className="detail-price">${prod.precio}</p>
-         {
-            goToCart
-            ? <button><Link to='/cart'>Ir al carrito</Link></button>
-            : <ItemCount prod={prod} cantidad={prod.cantidad} onAdd={onAdd}/>     
-         }
+        
+            <ItemCount prod={prod} cantidad={prod.cantidad} onAdd={onAdd}/>     
+      
+      </div>
+      </div>
+      <div className="contain-buttons">
+            <div className='button-back'>
+               <Link to="/productos"><button className='button-back-prod'> Atrás</button></Link>
+            </div>
+            <div className='button-back'>
+               <Link to="/cart"><button className='button-back-prod button-back-prod-2'> Ir  al Carrito</button></Link>
+            </div>
+      </div>
+     
 
-         
-      </div>
-      </div>
-      <div className='button-back'>
-         <Link to="/productos"><button className='button-back-prod'> Atrás</button></Link>
-      </div>
       </>
   
 
