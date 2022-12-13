@@ -1,43 +1,49 @@
 import "./navbar.css";
-import Cart from "../CartWidget/CartWidget"
-import ImgLogo from "../../assets/logoSinFondo.png"
-import {Link} from "react-router-dom"
-
-
+import Cart from "../CartWidget/CartWidget";
+import ImgLogo from "../../assets/logoSinFondo.png";
+import { Link } from "react-router-dom";
 
 // Navbar
 
-
- export function Navbar () { 
-
+export function Navbar() {
   // Rendering navbar
 
-  return <>
-  
-   <div className="navbar">
-      
-        <Link to="/"><img src={ImgLogo} alt="hoja" className="imgPlanta"/></Link>
+  return (
+    <>
+      <div className="navbar">
+        <Link to="/">
+          <img src={ImgLogo} alt="hoja" className="imgPlanta" />
+        </Link>
         <ul className="navbar-ul">
-            <li>
-              <Link to="/" className="nav-link">Inicio</Link>
-            </li>
+          <li>
+            <Link to="/" className="nav-link">
+              Inicio
+            </Link>
+          </li>
         </ul>
         <ul className="navbar-ul">
-            <li>
-              <Link to="/nosotros" className="nav-link">Nosotros</Link>
-            </li>
+          <li>
+            <Link to="/nosotros" className="nav-link">
+              Nosotros
+            </Link>
+          </li>
         </ul>
         <ul className="navbar-ul">
-            <li>
-              <Link to="/productos" className="nav-link">Productos</Link>
-            </li>
+          <li>
+            <Link to="/productos" className="nav-link">
+              Productos
+            </Link>
+          </li>
         </ul>
         <ul className="navbar-ul">
-            <li>
-              <Link to="/category" className="nav-link">Filtros</Link>
-            </li>
+          <li>
+            <Link to="/category" className="nav-link">
+              Filtros
+            </Link>
+          </li>
         </ul>
-        <Cart/>
-  </div>
-  </>
+        <Cart />
+      </div>
+    </>
+  );
 }

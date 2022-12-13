@@ -1,18 +1,13 @@
-import loadingImg from '../../assets/loading.jpeg'
+import loadingImg from "../../assets/loading.jpeg";
 
+const Loading = () => {
 
-
-
-    const Loading = () => {
-
-
-
+  
   return (
     <div>
-        <img src={loadingImg} alt={loadingImg} className="loading" />
+      <img src={loadingImg} alt={loadingImg} className="loading" />
     </div>
-  )
-}
-
+  );
+};
 
 export default Loading;

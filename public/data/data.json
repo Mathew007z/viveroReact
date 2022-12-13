@@ -38,7 +38,7 @@
         },
         {
         "id": 6,
-        "nombre": "Manzanero",
+        "nombre": "Manzano",
         "precio": 4500,
         "imagen":"../assets/manzano.png",
         "cantidad": 1
@@ -60,7 +60,7 @@
         },
         {
        "id": 9,
-       "nombre": "Tomate Cherry",
+       "nombre": "Cherry",
        "precio": 1800,
        "imagen":"../assets/tomatecherry.png",
        "cantidad": 1
@@ -74,14 +74,14 @@
        },
        {      
        "id": 11,
-       "nombre": "Rosa Floribunda",
+       "nombre": "Rosa Flori",
        "precio": 2500,
        "imagen":"../assets/floribunda.png",
        "cantidad": 1     
        },
        {
        "id": 12,
-       "nombre": "Rosa Damascena",
+       "nombre": "Rosa Dama",
        "precio": 2100,
        "imagen":"../assets/rosa-damesca.png",
        "cantidad": 1 

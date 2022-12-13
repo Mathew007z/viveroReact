@@ -1,36 +1,41 @@
-import { useState, useEffect } from 'react'
-import './itemdetailcontainer.css'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import {useParams} from 'react-router-dom'
+import { useState, useEffect } from "react";
+import "./itemdetailcontainer.css";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+
+
 
 
 
 
 
 const ItemDetailContainer = () => {
-    
-  
-    const [prod , setProd] = useState([])
-    // useParams return a string
-    const { id } = useParams();
+  const [prod, setProd] = useState([]);
+  // useParams return a string
+  const { id } = useParams();
 
-    useEffect(() => {
-        // return a number
-        fetch('../data/data.json')
-        .then((res) => res.json())
-        .then((data)=>setProd(data.find((item) => item.id === parseInt(id))))
-    },[id])
-
+  useEffect(() => {
+    // return a number
+    fetch("../data/data.json")
+      .then((res) => res.json())
+      .then((data) => setProd(data.find((item) => item.id === parseInt(id))));
+  }, [id]);
 
   return (
     <>
-       <div className='div'>
-             <ItemDetail prod={prod}/>
-     </div>
+      <div className="div">
+        <ItemDetail prod={prod} />
+      </div>
     </>
-  )
-}
-export default ItemDetailContainer
+  );
+};
+export default ItemDetailContainer;
+
+
+
+
+
+
 
 
 
@@ -49,13 +54,7 @@ export default ItemDetailContainer
 //     }
 // ]
 
-
-
-
-
-// Promesa Mockeada; 
-
-
+// Promesa Mockeada;
 
 // const ItemDetailContainer = () => {
 
@@ -64,14 +63,12 @@ export default ItemDetailContainer
 //     useEffect(() => {
 //         const promesa = new Promise((resolve) => {
 //             setTimeout(() => resolve (item),2000);
-            
+
 //         })
 //         promesa.then(res => setProd(res))
-        
-//     },[prod]) 
 
+//     },[prod])
 
-    
 //   return (
 //     <div className='div'>
 //         {prod.map((prod)=>(
@@ -79,8 +76,7 @@ export default ItemDetailContainer
 //         ))}
 //     </div>
 //   )
-    
-// }
 
+// }
 
 // export default ItemDetailContainer;

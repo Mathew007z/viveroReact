@@ -1,17 +1,16 @@
- import "./itemlist.css"
- import Item from '../Item/Item'
+import "./itemlist.css";
+import Item from "../Item/Item";
 
+function ItemList({ data }) {
 
- function ItemList ({ data }) { 
-   return(
+  
+  return (
+    <div className="card">
+      {data.map((data) => (
+        <Item data={data} key={data.id} />
+      ))}
+    </div>
+  );
+}
 
-      <div className="card">
-      {data.map(data => <Item data={data} key={data.id} />)}
-      </div>
-   )
-
- }
-
- export default ItemList;
-
-
+export default ItemList;

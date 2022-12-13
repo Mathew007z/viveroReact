@@ -5,7 +5,7 @@ import carritoVacio from '../../assets/carrito-vacio.png'
 
 
     const Cart = () => {
-        const { cart, removeProduct,totalPrice,clearCart } = useCartContext();
+        const { cart, removeProduct,totalPrice,clearCart,eliminarPorUnidad } = useCartContext();
 
 
             return (
@@ -19,19 +19,21 @@ import carritoVacio from '../../assets/carrito-vacio.png'
                         </div> :
                         <div className='cart-map'>
                             {
-                                cart.map((prod , indice) => 
-                                    <div className='detail-cont' key={indice}>
-                                        <div className='cardCarrito'>
-                                        <div className='descriptionArticle'>
-                                                <h3 className='name-cart'>{prod.nombre}</h3>
-                                                    <img src={prod.imagen} alt={prod.imagen} className='card-img'/>
-                                                <p className='precio-cart'>Precio: {prod.precio} x Unidad</p>
-                                                <p className='precio-cart'>Cantidad : {prod.cantidad}</p>
-                                                    <button onClick={() => removeProduct(prod.id)} className="button-cart">Eliminar Produucto</button>
-                                            </div>
-                                        
+                        cart.map((prod , indice) => 
+                        <div className='detail-cont' key={indice}>
+                            <div className='cardCarrito'>
+                                <div className='descriptionArticle'>
+                                            <h3 className='name-cart'>{prod.nombre}</h3>
+                                            <img src={prod.imagen} alt={prod.imagen} className='card-img'/>
+                                        <p className='precio-cart'>Precio: {prod.precio} x Unidad</p>
+                                        <p className='precio-cart'>Cantidad : {prod.cantidad}</p>
+                                        <div className='buttonDecrease'>
+                                            <button className='decrease' onClick={() => eliminarPorUnidad(prod.id)}> - </button>
+                                            <button onClick={() => removeProduct(prod.id)} className="button-cart">Eliminar Todo</button>
                                         </div>
-                                    </div> 
+                                </div>      
+                            </div>
+                        </div> 
                     )}</div>
                    
                   
