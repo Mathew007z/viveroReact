@@ -33,7 +33,7 @@
     transition: 0.2 ease;
     height: 350px;
     display: flex;
-    background-color: #fff;
+    background-color: rgb(253, 239, 255);
     flex-direction: column;
     justify-content: center;
     align-items: center;

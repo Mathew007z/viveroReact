@@ -11,12 +11,14 @@ import Cart from "./components/Cart/Cart";
 import Nosotros from "./components/Nosotros/Nosotros";
 import Category from "./components/Category/Category";
 import CartProvider from "../src/Context/CartContext";
+import toast, {Toaster} from 'react-hot-toast' 
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <CartProvider>
+          <Toaster/>
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
