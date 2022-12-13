@@ -28,7 +28,7 @@ import carritoVacio from '../../assets/carrito-vacio.png'
                                         <p className='precio-cart'>Precio: {prod.precio} x Unidad</p>
                                         <p className='precio-cart'>Cantidad : {prod.cantidad}</p>
                                         <div className='buttonDecrease'>
-                                            <button className='decrease' onClick={() => eliminarPorUnidad(prod.id)}> - </button>
+                                            <button className='decrease' disabled={prod.cantidad <= 0} onClick={() => eliminarPorUnidad(prod.id)}> - </button>
                                             <button onClick={() => removeProduct(prod.id)} className="button-cart">Eliminar Todo</button>
                                         </div>
                                 </div>      
