@@ -4,11 +4,9 @@ import { useState, useContext } from "react";
 const CartContext = React.createContext([]);
 export const useCartContext = () => useContext(CartContext);
 
-
-const CartProvider = ( { children } ) => {
-
-
+const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  
 
   // Here , would be the logic that will be used to configure the cart.
 
@@ -27,18 +25,20 @@ const CartProvider = ( { children } ) => {
   // Remove
   const removeProduct = (id) => setCart(cart.filter((prod) => prod.id !== id));
 
-  const eliminarPorUnidad = (id) => setCart(cart.map((prod) => {
-    if (prod.id === id){
-      return {...prod, cantidad: prod.cantidad - 1}
-    }else{
-      return prod;
-    }
-  }))
-
+  const eliminarPorUnidad = (id) =>
+    setCart(
+      cart.map((prod) => {
+        if (prod.id === id) {
+          return { ...prod, cantidad: prod.cantidad - 1 };
+        } else {
+          return prod;
+        }
+      })
+    );
 
   // put product
   const addProduct = (item, cantidad) => {
-    toast.success('Se Agregó correctamente al Carrito')
+    toast.success("Se Agregó correctamente al Carrito");
     if (isInCart(item.id)) {
       setCart(
         cart.map((prod) => {
@@ -52,9 +52,14 @@ const CartProvider = ( { children } ) => {
     }
   };
 
+
+
+
+  
+
   return (
     <CartContext.Provider
-    // DISPONIBLES
+      // DISPONIBLES
       value={{
         cart,
         clearCart,
@@ -63,7 +68,8 @@ const CartProvider = ( { children } ) => {
         removeProduct,
         cantidadItem,
         totalPrice,
-        eliminarPorUnidad
+        eliminarPorUnidad,
+      
       }}
     >
       {children}

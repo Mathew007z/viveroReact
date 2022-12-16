@@ -1,13 +1,35 @@
-import loadingImg from "../../assets/loading.jpeg";
+import {toast} from 'react-hot-toast'
+import './loading.css'
+import {useState} from 'react'
+
+
+
 
 const Loading = () => {
+  const [settings, saveSettings] = useState('')
+
+
+  const load =  () => {
+    toast.loading ('Cargando...')
+      
+    
+  }
+
 
   
+
+
   return (
-    <div>
-      <img src={loadingImg} alt={loadingImg} className="loading" />
+
+
+
+    <div className="back-loading">
+        {() => load()}
+    
     </div>
   );
 };
+
+
 
 export default Loading;
