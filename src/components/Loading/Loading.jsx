@@ -1,35 +1,26 @@
-import {toast} from 'react-hot-toast'
+import { ClockLoader } from 'react-spinners';
 import './loading.css'
-import {useState} from 'react'
+
 
 
 
 
 const Loading = () => {
-  const [settings, saveSettings] = useState('')
-
-
-  const load =  () => {
-    toast.loading ('Cargando...')
-      
-    
-  }
-
-
-  
+ 
 
 
   return (
-
-
-
-    <div className="back-loading">
-        {() => load()}
-    
+    <div className='loader'>
+    <ClockLoader color="pink" size={90} />
+    <p className='cargando'>Cargando...</p>
     </div>
   );
 };
 
 
-
 export default Loading;
+
+
+
+
+

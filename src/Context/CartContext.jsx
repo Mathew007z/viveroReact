@@ -1,4 +1,4 @@
-import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast"; 
 import React from "react";
 import { useState, useContext } from "react";
 const CartContext = React.createContext([]);

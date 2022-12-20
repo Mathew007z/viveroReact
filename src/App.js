@@ -11,7 +11,11 @@ import Cart from "./components/Cart/Cart";
 import Nosotros from "./components/Nosotros/Nosotros";
 import Category from "./components/Category/Category";
 import CartProvider from "../src/Context/CartContext";
-import toast, {Toaster} from 'react-hot-toast' 
+import  {Toaster} from 'react-hot-toast' 
+
+
+
+
 
 export default function App() {
   return (
@@ -26,8 +30,8 @@ export default function App() {
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />
             <Route exact path="/nosotros" element={<Nosotros />} />
             <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/category" element={<Category />} />
-            <Route path="*" element={<Error />} />
+            <Route exact path="/category" element={<Category/>}/>
+            <Route path="*" element={<Error />}/>
           </Routes>
         </CartProvider>
         <Footer />

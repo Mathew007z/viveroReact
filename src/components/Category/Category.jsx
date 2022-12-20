@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 
+
     const Category = () => {
 
         const [data, setData] = useState(Categories)
