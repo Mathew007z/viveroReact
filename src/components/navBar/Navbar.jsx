@@ -35,13 +35,6 @@ export function Navbar() {
             </Link>
           </li>
         </ul>
-        <ul className="navbar-ul">
-          <li>
-            <Link to="/category" className="nav-link">
-              Filtros
-            </Link>
-          </li>
-        </ul>
         <Cart />
       </div>
     </>
