@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 
 
+
 function ItemDetail ( { prod } ) { 
 
    const [goToCart, setGoToCart] = useState(false);

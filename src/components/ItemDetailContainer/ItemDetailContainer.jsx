@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import "./itemdetailcontainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { getFirestore , doc , getDoc} from 'firebase/firestore'
+
+
+// traer firestore 
+// crear un puntero al lado del lado que queremos traer 
+// con una promise, traemos ese dato.
+
 
 
 
@@ -15,10 +22,11 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    // return a number
-    fetch("../data/data.json")
-      .then((res) => res.json())
-      .then((data) => setProd(data.find((item) => item.id === parseInt(id))));
+    const querydb = getFirestore();
+    const queryDoc = doc(querydb, 'productos', id);
+    getDoc(queryDoc)
+    .then(res => setProd({id:res.id, ...res.data()}))
+   
   }, [id]);
 
   return (

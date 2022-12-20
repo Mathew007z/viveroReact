@@ -10,6 +10,8 @@ import {Link} from 'react-router-dom'
     const Category = () => {
 
         const [data, setData] = useState(Categories)
+
+        
         const filterResult = (catItem) => {
         const result = Categories.filter((curDate) => {
             return curDate.category === catItem;
