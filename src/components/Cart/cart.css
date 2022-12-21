@@ -101,8 +101,15 @@
 }
 
 .button-cart-24{
-    padding: 20px 60px 20px 60px;
+    padding: 10px 40px 10px 40px;
     font-size: 23px;
+    background-color: rgba(155, 255, 144, 0.659);
+
+}
+
+.button-cart.button-cart-24-n1{
+    background-color: #ff6c7daa;
+   
 }
 
 

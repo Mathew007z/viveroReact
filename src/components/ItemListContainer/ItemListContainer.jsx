@@ -28,7 +28,7 @@ const ItemListContainer = () => {
       const querydb = getFirestore();
       const queryCollection = collection(querydb, 'productos');
       if(categoriaId){
-        const queryFilter = query(queryCollection, where('categoria', '==', 'categoriaId'))
+        const queryFilter = query(queryCollection, where('categoria', '==', categoriaId))
         getDocs(queryFilter)
           .then(res => setData(res.docs.map(prod => ({id:prod.id, ...prod.data()}))))
       }else{
@@ -49,8 +49,11 @@ const ItemListContainer = () => {
         
         <div className="listProd">
         <div>
-          <Link to='/categoria/mayor'><button className="buttonCategory">Mayor Precio</button></Link>
-          <Link to='/categoria/menor'><button className="buttonCategory">Menor Precio</button></Link>
+          <div className="buttons-category"> 
+              <Link to={'/categoria/mayor'}><button className="buttonCategory">Mayor Precio</button></Link>
+              <Link to={'/categoria/menor'}><button className="buttonCategory">Menor Precio</button></Link>
+              <Link to={'/productos'}><button className="buttonCategory">Atrás</button></Link>
+          </div>
           <img src={HotSale} alt={HotSale} className="img-hot-sale" />
           <img src={HotSale} alt={HotSale} className="img-hot-sale" />
           <img src={HotSale} alt={HotSale} className="img-hot-sale" />

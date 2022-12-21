@@ -1,11 +1,55 @@
+import { toast } from "react-hot-toast"; 
 import  './cart.css'
 import { useCartContext } from '../../Context/CartContext';
 import carritoVacio from '../../assets/carrito-vacio.png'
+import { addDoc, getFirestore, collection  } from 'firebase/firestore';
 
 
 
     const Cart = () => {
         const { cart, removeProduct,totalPrice,clearCart,eliminarPorUnidad } = useCartContext();
+
+        // POST HACIA FIRESTORE
+        // HARDCODEANDO USUARIO
+        const compra = {
+            user: {
+                name:'user',
+                email:'user@example.com',
+                phone:'123123',
+                address: 'calle falsa 123'
+            },
+            items:cart.map(prod => ({id : prod.id, nombre: prod.nombre, precio: prod.precio, cantidad: prod.cantidad})),
+            total: totalPrice(),
+        }
+
+
+        const finishClick = () => {
+
+            if(cart.length <= 0) {
+                toast.error("Selecciona algun producto!")
+            }else{
+                toast.success('La Compra se realizó Correctamente', {
+                    style: {
+                      border: '1px solid #713200',
+                      padding: '16px',
+                      color: '#713200',
+                    },
+                    iconTheme: {
+                      primary: '#713200',
+                      secondary: '#FFFAEE',
+                    },
+                  });
+                const db = getFirestore();
+                const userCollection = collection(db, 'compra')
+                addDoc(userCollection, compra)
+                .then(({ id }) => console.log(id))
+                clearCart();
+            }
+            
+        }
+
+
+
 
 
             return (
@@ -41,7 +85,8 @@ import carritoVacio from '../../assets/carrito-vacio.png'
                 </div>
                  <div className='cont-vacio'>
                  <p className='precio-cart-24'>Total: ${totalPrice()}</p>
-                 <button onClick={clearCart} className='button-cart button-cart-24'>Vaciar Carrito</button>
+                 <button onClick={clearCart} className='button-cart button-cart-24 button-cart button-cart-24-n1'>Vaciar Carrito</button>
+                 <button  className='button-cart button-cart-24' onClick={finishClick}>Terminar Compra</button>
                 </div>
                 </>
             )
