@@ -43,15 +43,22 @@ cart.map((prod , indice) =>
 </div>
 </div>
 </div>
-)}</div>
-
-
+)}
+</div>
 }
 </div>
 <div className='cont-vacio'>
 <p className='precio-cart-24'>Total: ${totalPrice()}</p>
-<button onClick={clearCart} className='button-cart button-cart-24 button-cart button-cart-24-n1'>Vaciar Carrito</button>
-<Link to='/form'><button className='button-cart button-cart-24'>Terminar Compra</button></Link>
+
+{
+    cart.length === 0 ?
+    <div></div>
+    :
+    <>
+    <button onClick={clearCart} className='button-cart button-cart-24 button-cart button-cart-24-n1'>Vaciar Carrito</button>
+    <Link to='/form'><button className='button-cart button-cart-24'>Terminar Compra</button></Link>
+    </>
+}
 </div>
 </>
 )

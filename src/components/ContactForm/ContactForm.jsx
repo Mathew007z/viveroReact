@@ -3,6 +3,7 @@ import './contactform.css'
 import {useState} from 'react'
 import {getFirestore, addDoc, collection} from 'firebase/firestore';
 import { useCartContext } from "../../Context/CartContext";
+import { Link } from 'react-router-dom';
 
     const ContactForm = () => {
         const [id , setId] = useState()
@@ -49,12 +50,6 @@ import { useCartContext } from "../../Context/CartContext";
             }
       }
 
-
-
-
-       
-        
-
         // Hago copia del form
         const changeHandler = (ev) => {
             const {value, name} = ev.target;
@@ -67,45 +62,50 @@ import { useCartContext } from "../../Context/CartContext";
 
 
         return (
-            <div>
+            <div className="div-full">
             {typeof id !== 'undefined' ? (
-              <div>
-                <p>Su mensaje se ha enviado correctamente</p>
-                <p>{id}</p>
+              <div className="message-dad">
+                <p className="message">Su mensaje se ha enviado correctamente!</p>
+                <Link to='/productos'><button className="button-message">Volver a Comprar</button></Link>
               </div>
             ) : (
                 // Envio los datos del formulario que ya estan en el estado.
-              <form onSubmit={finishClick}>
+           
+              <form onSubmit={finishClick} className='form'>
                 <div>
-                  <label htmlFor="name">Nombre</label>
+                    <h2 className="title-compra">Formulario de Compra</h2>
+                  <label htmlFor="name" className="label-1">Nombre: </label>
                   <input
                     name="name"
                     id="name"
                     value={form.name}
                     // Con el change me llevo el valor del input a un estado.
                     onChange={changeHandler}
+                    className='input-duo'
                   />
                 </div>
                 <div>
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email" className="label-1" >Email: </label>
                   <input
                     type="email"
                     name="email"
                     id="email"
                     value={form.email}
                     onChange={changeHandler}
+                    className='input-duo input-duo-2'
                   />
                 </div>
                 <div>
-                  <label htmlFor="message">Mensaje</label>
+                  <label htmlFor="message" className="label-1">Mensaje: </label>
                   <textarea
                     name="message"
                     id="message"
                     value={form.message}
                     onChange={changeHandler}
+                    className='input-duo'
                   ></textarea>
                 </div>
-                <button>Enviar</button>
+                <button className="submit-button">Enviar</button>
               </form>
             )}
           </div>
