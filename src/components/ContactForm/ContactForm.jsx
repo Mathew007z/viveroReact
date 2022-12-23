@@ -4,12 +4,6 @@ import {useState} from 'react'
 import {getFirestore, addDoc, collection} from 'firebase/firestore';
 import { useCartContext } from "../../Context/CartContext";
 
-
-
-
-
-
-
     const ContactForm = () => {
         const [id , setId] = useState()
         const [form, setForm] = useState({
@@ -26,16 +20,18 @@ import { useCartContext } from "../../Context/CartContext";
           total: totalPrice(),
       }
 
+      console.log(Object.values(form))
 
-      const finishClick = () => {
-          if(Object.values(form).length < 3) {
+      const finishClick = (e) => {
+        e.preventDefault()
+          if(form.name === '' && form.email === '') {
               toast.error("Todos los campos son requeridos")
             }else{
               const db = getFirestore();
               const userCollection = collection(db, 'compra')
                 addDoc(userCollection, compra)
-                .then(({ id }) => {
-                  toast.success(`Su Compra ${id} se realizó Correctamente`, {
+                .then(( res ) => {
+                  toast.success(`Su Compra ${res.id} se realizó Correctamente`, {
                     style: {
                       border: '1px solid #713200',
                       padding: '16px',
@@ -46,6 +42,7 @@ import { useCartContext } from "../../Context/CartContext";
                       secondary: '#FFFAEE',
                     },
                   });
+                  setId(res.id)
                 clearCart();
                  })   
               
