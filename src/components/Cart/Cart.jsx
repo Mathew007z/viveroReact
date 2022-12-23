@@ -3,10 +3,11 @@ import  './cart.css'
 import { useCartContext } from '../../Context/CartContext';
 import carritoVacio from '../../assets/carrito-vacio.png'
 import { addDoc, getFirestore, collection  } from 'firebase/firestore';
+import ContactForm from '../ContactForm/ContactForm'
 
 
 
-    const Cart = () => {
+    const Cart = ({id}) => {
         const { cart, removeProduct,totalPrice,clearCart,eliminarPorUnidad } = useCartContext();
 
         // POST HACIA FIRESTORE
@@ -85,6 +86,7 @@ import { addDoc, getFirestore, collection  } from 'firebase/firestore';
                 </div>
                  <div className='cont-vacio'>
                  <p className='precio-cart-24'>Total: ${totalPrice()}</p>
+                <ContactForm/>
                  <button onClick={clearCart} className='button-cart button-cart-24 button-cart button-cart-24-n1'>Vaciar Carrito</button>
                  <button  className='button-cart button-cart-24' onClick={finishClick}>Terminar Compra</button>
                 </div>

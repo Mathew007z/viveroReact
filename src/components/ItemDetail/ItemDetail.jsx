@@ -11,6 +11,7 @@ function ItemDetail ( { prod } ) {
 
    const [goToCart, setGoToCart] = useState(false);
    const { addProduct } = useCartContext();
+   
 
 
 
