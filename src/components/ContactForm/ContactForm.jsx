@@ -1,6 +1,9 @@
+import { toast } from "react-hot-toast";
 import './contactform.css'
 import {useState} from 'react'
-import {getFirestore, addDoc, collection} from 'firebase/firestore'
+import {getFirestore, addDoc, collection} from 'firebase/firestore';
+import { useCartContext } from "../../Context/CartContext";
+
 
 
 
@@ -15,24 +18,44 @@ import {getFirestore, addDoc, collection} from 'firebase/firestore'
         email: '',
         message: '',
         });
+        const { cart,totalPrice,clearCart } = useCartContext();
+
+        const compra = {
+          form,
+          items:cart.map(prod => ({id : prod.id, nombre: prod.nombre, precio: prod.precio, cantidad: prod.cantidad})),
+          total: totalPrice(),
+      }
+
+
+      const finishClick = () => {
+          if(Object.values(form).length < 3) {
+              toast.error("Todos los campos son requeridos")
+            }else{
+              const db = getFirestore();
+              const userCollection = collection(db, 'compra')
+                addDoc(userCollection, compra)
+                .then(({ id }) => {
+                  toast.success(`Su Compra ${id} se realizó Correctamente`, {
+                    style: {
+                      border: '1px solid #713200',
+                      padding: '16px',
+                      color: '#713200',
+                    },
+                    iconTheme: {
+                      primary: '#713200',
+                      secondary: '#FFFAEE',
+                    },
+                  });
+                clearCart();
+                 })   
+              
+            }
+      }
 
 
 
 
-        const submitHandler = (ev) => {
-            ev.preventDefault();
-
-            const db = getFirestore();
-            const formsCollection = collection(db, 'forms');
-            addDoc(formsCollection, form).then((res => {
-              setForm({
-                name: '',
-                email: '',
-                message: '',
-              })
-              setId(res.id)
-            }))
-        }
+       
         
 
         // Hago copia del form
@@ -55,7 +78,7 @@ import {getFirestore, addDoc, collection} from 'firebase/firestore'
               </div>
             ) : (
                 // Envio los datos del formulario que ya estan en el estado.
-              <form onSubmit={submitHandler}>
+              <form onSubmit={finishClick}>
                 <div>
                   <label htmlFor="name">Nombre</label>
                   <input
