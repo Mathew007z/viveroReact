@@ -1,11 +1,27 @@
 import { toast } from "react-hot-toast"; 
 import React from "react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 const CartContext = React.createContext([]);
 export const useCartContext = () => useContext(CartContext);
 
+
+
+
+const getLocalStorage = () => {
+  let cart = localStorage.getItem('cart')
+  if(cart){
+    return(cart = JSON.parse(localStorage.getItem('cart')));
+  }else{
+    return [];
+  }
+}
+
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(getLocalStorage());
+
+  useEffect(()=> {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  },[cart])
   
 
   // Here , would be the logic that will be used to configure the cart.
