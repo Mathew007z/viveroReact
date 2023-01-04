@@ -6,7 +6,9 @@ import { getFirestore , doc , getDoc} from 'firebase/firestore'
 
 
 // traer firestore 
+
 // crear un puntero al lado del lado que queremos traer 
+
 // con una promise, traemos ese dato.
 
 

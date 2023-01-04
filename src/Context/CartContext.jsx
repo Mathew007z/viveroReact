@@ -6,7 +6,7 @@ export const useCartContext = () => useContext(CartContext);
 
 
 
-
+// Local Storage
 const getLocalStorage = () => {
   let cart = localStorage.getItem('cart')
   if(cart){

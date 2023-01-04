@@ -73,9 +73,3 @@ export default ItemListContainer;
 
 
 
-
-// useEffect(() => {
-//   fetch("/data/data.json")
-//     .then((res) => res.json())
-//     .then((obj) => setData(obj)) ;
-// }, []);

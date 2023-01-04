@@ -9,12 +9,6 @@ import carritoVacio from '../../assets/carrito-vacio.png'
 const Cart = ({id}) => {
 const { cart, removeProduct,totalPrice,clearCart,eliminarPorUnidad } = useCartContext();
 
-// POST HACIA FIRESTORE
-// HARDCODEANDO USUARIO
-
-
-
-
 
 
 return (

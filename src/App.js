@@ -11,7 +11,7 @@ import Cart from "./components/Cart/Cart";
 import Nosotros from "./components/Nosotros/Nosotros";
 import CartProvider from "../src/Context/CartContext";
 import  {Toaster} from 'react-hot-toast' 
-import ContactForm  from "./components/ContactForm/ContactForm";
+import CheckOut from "./components/CheckOut/CheckOut";
 
 
 
@@ -31,7 +31,7 @@ export default function App() {
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />
             <Route exact path="/nosotros" element={<Nosotros />} />
             <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/form" element={<ContactForm />}/>
+            <Route exact path="/form" element={<CheckOut />}/>
             <Route path="*" element={<Error />}/>
           </Routes>
         </CartProvider>

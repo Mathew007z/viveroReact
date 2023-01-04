@@ -1,11 +1,11 @@
 import { toast } from "react-hot-toast";
-import './contactform.css'
+import './checkout.css'
 import {useState} from 'react'
 import {getFirestore, addDoc, collection} from 'firebase/firestore';
 import { useCartContext } from "../../Context/CartContext";
 import { Link } from 'react-router-dom';
 
-    const ContactForm = () => {
+    const CheckOut = () => {
         const [id , setId] = useState()
         const [form, setForm] = useState({
 
@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
           total: totalPrice(),
       }
 
-      console.log(Object.values(form))
+   
 
       const finishClick = (e) => {
         e.preventDefault()
@@ -113,4 +113,4 @@ import { Link } from 'react-router-dom';
 }
 
 
-export default ContactForm;
+export default CheckOut;
