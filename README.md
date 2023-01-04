@@ -230,7 +230,7 @@ Esta variable **compra**, la usaremos en la funcion **finishClick**, la cual es 
 
 Saludos!!!
 
-Atte: [Matias Acuña](https://github.com/Mathew007z/viveroReact). 
+Atte: [Matias Acuña](https://www.linkedin.com/in/matiasacua/). 
 
 
 
