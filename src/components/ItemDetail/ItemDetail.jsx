@@ -23,24 +23,20 @@ function ItemDetail ( { prod } ) {
  
    return(
       <>
-   <div className="detail-container">
-      <div className="detail-item-cont">
-         <h3 className="title-detail">{prod.nombre}</h3>
-         <img className="imgF" src={prod.imagen} alt={prod.id}/>
-         <p className="detail-price">${prod.precio}</p>
-        
-            <ItemCount prod={prod} cantidad={prod.cantidad} onAdd={onAdd}/>     
-      
-      </div>
-      </div>
-      <div className="contain-buttons">
-            <div className='button-back'>
-               <Link to="/productos"><button className='button-back-prod'> Atrás</button></Link>
+      <div className="detail-combo">
+            <div className="detail-container">
+            <div className="detail-item-cont">
+               <h3 className="title-detail">{prod.nombre}</h3>
+               <img className="imgF" src={prod.imagen} alt={prod.id}/>
+               <p className="detail-price">${prod.precio}</p>
+                  <ItemCount prod={prod} cantidad={prod.cantidad} onAdd={onAdd}/>     
             </div>
-            <div className='button-back'>
-               <Link to="/cart"><button className='button-back-prod button-back-prod-2'> Ir  al Carrito</button></Link>
             </div>
+               <div className='button-back'>
+                     <Link to="/cart"><button className='button-back-prod button-back-prod-2'> Ir  al Carrito</button></Link>
+                </div>
       </div>
+  
      
 
       </>

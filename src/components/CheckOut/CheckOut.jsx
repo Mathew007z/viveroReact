@@ -1,7 +1,7 @@
 import { toast } from "react-hot-toast";
 import './checkout.css'
 import {useState} from 'react'
-import {getFirestore, addDoc, collection} from 'firebase/firestore';
+import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import { useCartContext } from "../../Context/CartContext";
 import { Link } from 'react-router-dom';
 
@@ -9,10 +9,12 @@ import { Link } from 'react-router-dom';
         const [id , setId] = useState()
         const [form, setForm] = useState({
 
-        name: '',
+        name: '', 
         email: '',
         message: '',
         });
+
+        
         const { cart,totalPrice,clearCart } = useCartContext();
 
         const compra = {
@@ -55,7 +57,6 @@ import { Link } from 'react-router-dom';
             const {value, name} = ev.target;
             setForm({...form, [name]:value})
         }
-
 
 
 

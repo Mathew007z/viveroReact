@@ -42,20 +42,27 @@
 
 
 
-/* Media query */
-
-
-
-
-/* @media screen and (max-width: 576px) {
-
+@media screen and (max-width: 768px){
     .about-paragraph{
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'Varela Round', sans-serif;
         width: 300px;
         letter-spacing:1px;
     
     }
 
+.about-title{
+    font-size: 25px;
+    margin-bottom: 1em;
+    border-bottom: 2px solid rgb(78, 19, 218);
+    width: 200px;
+    font-family: 'Varela Round', sans-serif;
+    margin-left: .8em;
+}
 
-} */
+.about-img{
+    width: 150px;
+}
+
+    
+}

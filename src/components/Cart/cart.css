@@ -138,3 +138,35 @@
     cursor: pointer;
 
 }
+
+
+
+@media screen and (max-width: 768px){
+    .img-carrito-vacio{
+        width: 300px;
+        margin-bottom: 1.5em;
+    }
+
+.oops{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 25px;
+}
+
+.precio-cart-24{
+    font-size: 22px;
+    margin-bottom: 1em;
+}
+
+.button-cart-24{
+    padding: 10px 40px 10px 40px;
+    font-size: 16px;
+    background-color: rgba(155, 255, 144, 0.659);
+
+}
+
+.button-cart.button-cart-24-n1{
+    background-color: #ff6c7daa;
+   
+}
+    
+}

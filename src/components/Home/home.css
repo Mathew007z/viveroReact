@@ -105,11 +105,6 @@
 }
 
 
-
-.plant{
-    width: 450px;
-}
-
 img{
     width: 11rem;
 }
@@ -123,4 +118,51 @@ img{
     margin-bottom: 1em;
     font-size: 100px;
     font-family: 'Dancing Script', cursive;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    .vivero{
+        font-size: 70px;
+    }
+    .descuento{
+        font-family: 'Varela Round', sans-serif;
+        font-size: 20px;
+        padding: 20px 30px 20px 30px;
+        background-color: rgb(253, 230, 200);
+        border-radius: 100px;
+    }
+    .box1{
+        margin-right: 8em;
+    }
+    .reno{
+        width:300px;
+        margin-bottom: 5em;
+    }
+    .title1{
+        font-size: 20px;
+        font-family: 'Varela Round', sans-serif;
+        margin-left: 7em;
+        margin-bottom: 1.5em;
+        width: 300px;
+    
+    }
+
+.buttonOff{
+  
+    padding: 10px 60px 10px 60px;
+    background-color: rgb(253, 230, 200);
+    border: 2px solid rgb(64, 101, 41);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+    margin-left: 4em;
+
+}
+
 }

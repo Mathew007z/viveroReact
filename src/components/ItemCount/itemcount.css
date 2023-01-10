@@ -27,3 +27,37 @@
     font-size: 20px;
     margin-top: .5em;
  }
+
+
+
+
+ @media screen and (max-width: 768px){
+    .buttonCount{
+        padding: 5px 20px 5px 20px ;
+        margin: 2em 0 0 1em;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 12px;
+        border-radius: 25px;
+        border: 1px solid #c607ed;
+        background-color: rgb(255, 242, 225);
+        cursor: pointer;
+    
+     }
+     .count-time{
+        text-align: center;
+        font-size: 16px;
+        margin-top: .5em;
+     }
+     .buttonHand2{
+    
+        padding: 3px 15px 3px 15px;
+        border-radius: 50px;
+        background-color:rgb(255, 242, 225);
+        border: 1px solid #000;
+        margin-left: .5em;
+        color: #000;
+        font-size: .8em;
+        
+    }
+    
+ }

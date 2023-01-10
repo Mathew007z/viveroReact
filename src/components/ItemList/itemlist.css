@@ -2,11 +2,27 @@
 .card{
     
     cursor: pointer;
-    height:4000px;
+    height:3500px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     
     
 }
 
 
+@media screen and (max-width: 768px){
+    .card{
+    
+        cursor: pointer;
+        height:max-content;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+}

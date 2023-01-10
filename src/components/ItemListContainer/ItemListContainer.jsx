@@ -1,7 +1,6 @@
 import "./itemlistcontainer.css";
 import React, { useState, useEffect } from "react";
 import ItemList from "..//ItemList/ItemList";
-import HotSale from "../../assets/hot-sale.png";
 import Loading from '../Loading/Loading'
 import { getFirestore , collection , getDocs, query, where} from 'firebase/firestore'
 import { Link ,useParams } from 'react-router-dom';
@@ -46,21 +45,16 @@ const ItemListContainer = () => {
     <>
       { loading ? <Loading/>
         :
-        
-        <div className="listProd">
-        <div>
+        <>
           <div className="buttons-category"> 
               <Link to={'/categoria/mayor'}><button className="buttonCategory">Mayor Precio</button></Link>
               <Link to={'/categoria/menor'}><button className="buttonCategory">Menor Precio</button></Link>
-              <Link to={'/productos'}><button className="buttonCategory">Atrás</button></Link>
+              <Link to={'/productos'}><button className="buttonCategory buttonCategory2">Atrás</button></Link>
           </div>
-          <img src={HotSale} alt={HotSale} className="img-hot-sale" />
-          <img src={HotSale} alt={HotSale} className="img-hot-sale" />
-          <img src={HotSale} alt={HotSale} className="img-hot-sale" />
-        </div>
+        <div className="listProd">
         <ItemList data={data} />
       </div>
-
+    </>
         }
 
     

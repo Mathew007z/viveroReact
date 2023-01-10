@@ -3,14 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 .listProd{
-            background-image: url(/src/assets/hotsale.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover; 
             display: flex;
-            flex-direction: row;
             align-items: center;
-        
+            
 }
 
 
@@ -29,15 +24,43 @@
     margin-bottom: 1em;
     font-family:'Varela Round', sans-serif;
     cursor: pointer;
+    
+}
+.buttonCategory2{
+    margin-top: 2em;
 }
 
 .buttons-category{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
+
 
 }
 
 .buttonCategory:hover{
     background-color: #fde0ff;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .listProd{
+    
+        flex-direction: column;
+}
+
+.buttons-category{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.2em;
+
+
+}
+
 }
