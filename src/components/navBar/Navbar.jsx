@@ -8,7 +8,7 @@ import ReactGA from 'react-ga';
 export function Navbar() {
   // Rendering navbar
   const sendDataGoogleAnalytics = () => {
-    ReactGA.event({category:'boton click', label:'request image'});
+    ReactGA.event({category:'boton click', action:'click action activate',label:'request image'});
   }
   return (
     <>
