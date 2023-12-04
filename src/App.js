@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import { Navbar } from "./components/navBar/Navbar";
 import Home from "./components/Home/Home";
@@ -12,12 +12,19 @@ import Nosotros from "./components/Nosotros/Nosotros";
 import CartProvider from "../src/Context/CartContext";
 import  {Toaster} from 'react-hot-toast' 
 import CheckOut from "./components/CheckOut/CheckOut";
-
+import ReactGA from 'react-ga';
 
 
 
 
 export default function App() {
+  ReactGA.initialize('G-ZXFSZR32TF')
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
+
+
   return (
     <>
       <BrowserRouter>

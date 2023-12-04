@@ -2,12 +2,14 @@ import "./navbar.css";
 import Cart from "../CartWidget/CartWidget";
 import ImgLogo from "../../assets/logoSinFondo.png";
 import { Link } from "react-router-dom";
-
+import ReactGA from 'react-ga';
 // Navbar
 
 export function Navbar() {
   // Rendering navbar
-
+  const sendDataGoogleAnalytics = () => {
+    ReactGA.event({category:'boton click', label:'request image'});
+  }
   return (
     <>
       <div className="navbar">
@@ -30,7 +32,7 @@ export function Navbar() {
         </ul>
         <ul className="navbar-ul">
           <li>
-            <Link to="/productos" className="nav-link">
+            <Link to="/productos" className="nav-link" onClick={() => sendDataGoogleAnalytics()}>
               Productos
             </Link>
           </li>
