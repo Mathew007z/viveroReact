@@ -26,7 +26,7 @@ export function Navbar() {
         <ul className="navbar-ul">
           <li>
             <Link to="/nosotros" className="nav-link">
-              Nosotros
+              Ejemplo
             </Link>
           </li>
         </ul>
