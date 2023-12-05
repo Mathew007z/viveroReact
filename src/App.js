@@ -13,13 +13,13 @@ import CartProvider from "../src/Context/CartContext";
 import  {Toaster} from 'react-hot-toast' 
 import CheckOut from "./components/CheckOut/CheckOut";
 import ReactGA from 'react-ga';
-
+import ReactGA4 from "react-ga4";
 
 
 
 export default function App() {
-  ReactGA.initialize('G-ZXFSZR32TF')
-
+  ReactGA.initialize('G-ZXFSZR32TF');
+  ReactGA4.initialize("G-ZXFSZR32TF");
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, [])
