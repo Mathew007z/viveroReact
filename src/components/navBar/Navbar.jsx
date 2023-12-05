@@ -8,20 +8,12 @@ import ReactGA4 from "react-ga4";
 
 export function Navbar() {
 
-  ReactGA4.initialize([
-    {
-      trackingId: "G-ZXFSZR32TF",
-    },
-    {
-      trackingId: "G-ZXFSZR32TF",
-    },
-  ]);
-  ReactGA4.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
-
-  const click_pageview = () => {
+  const onClick = () => {
     ReactGA4.event({
       category: "your category",
       action: "click",
+      lebel:'lebel prueba',
+      value:'xxxx'
     });
   }
 
@@ -47,7 +39,7 @@ export function Navbar() {
         </ul>
         <ul className="navbar-ul">
           <li>
-            <Link to="/productos" className="nav-link" onClick={() => click_pageview()}>
+            <Link to="/productos" className="nav-link" onClick={onClick}>
               Productos
             </Link>
           </li>

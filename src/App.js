@@ -12,17 +12,19 @@ import Nosotros from "./components/Nosotros/Nosotros";
 import CartProvider from "../src/Context/CartContext";
 import  {Toaster} from 'react-hot-toast' 
 import CheckOut from "./components/CheckOut/CheckOut";
-import ReactGA from 'react-ga';
-import ReactGA4 from "react-ga4";
+// import ReactGA from 'react-ga';
+import ReactGA from "react-ga4";
 
 
 
 export default function App() {
-  ReactGA.initialize('G-ZXFSZR32TF');
-  ReactGA4.initialize("G-ZXFSZR32TF");
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
+  const TRACKING_ID = 'G-ZXFSZR32TF';
+  // ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize(TRACKING_ID);
+
+  // useEffect(() => {
+  //   ReactGA.pageview(window.location.pathname + window.location.search);
+  // }, [])
 
 
   return (
