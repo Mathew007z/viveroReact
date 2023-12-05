@@ -8,23 +8,22 @@ import ReactGA4 from "react-ga4";
 
 export function Navbar() {
 
-  const TrackGoogleAnalyticsEvent = (
-    category,
-    event_name,
-    label,
-    data
-) => {
-    console.log("GA event:", category, ":", event_name, ":", label);
+  ReactGA4.initialize([
+    {
+      trackingId: "G-ZXFSZR32TF",
+    },
+    {
+      trackingId: "G-ZXFSZR32TF",
+    },
+  ]);
+  ReactGA4.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
 
-    let event_params = {
-        category,
-        label,
-        ...data
-    };
-    // Send GA4 Event
-    ReactGA4.event(event_name, event_params);
-};
- 
+  const click_pageview = () => {
+    ReactGA4.event({
+      category: "your category",
+      action: "click",
+    });
+  }
 
   return (
     <>
@@ -48,7 +47,7 @@ export function Navbar() {
         </ul>
         <ul className="navbar-ul">
           <li>
-            <Link to="/productos" className="nav-link" onClick={() => TrackGoogleAnalyticsEvent()}>
+            <Link to="/productos" className="nav-link" onClick={() => click_pageview()}>
               Productos
             </Link>
           </li>
