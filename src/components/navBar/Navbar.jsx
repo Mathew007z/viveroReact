@@ -16,7 +16,6 @@ export function Navbar() {
       value:'xxxx'
     });
   }
-
   return (
     <>
       <div className="navbar">
@@ -39,7 +38,7 @@ export function Navbar() {
         </ul>
         <ul className="navbar-ul">
           <li>
-            <Link to="/productos" className="nav-link" onClick={onClick}>
+          <Link to="/productos" className="nav-link" onClick={onClick}>
               Productos
             </Link>
           </li>

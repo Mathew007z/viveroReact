@@ -19,12 +19,8 @@ import ReactGA from "react-ga4";
 
 export default function App() {
   const TRACKING_ID = 'G-ZXFSZR32TF';
-  // ReactGA.initialize(TRACKING_ID);
   ReactGA.initialize(TRACKING_ID);
 
-  // useEffect(() => {
-  //   ReactGA.pageview(window.location.pathname + window.location.search);
-  // }, [])
 
 
   return (
