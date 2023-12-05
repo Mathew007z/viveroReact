@@ -8,11 +8,17 @@ import ReactGA4 from "react-ga4";
 
 export function Navbar() {
 
+
+
+  useEffect(() => {
+    ReactGA4.send({hitType:"pageview", page:location.pathname,title:"navigate user"})
+  }, [])
+  
   const onClick = () => {
     ReactGA4.event({
       category: "your category",
       action: "click",
-      lebel:'lebel prueba',
+      label:'lebel prueba',
       value:'xxxx'
     });
   }
@@ -20,7 +26,7 @@ export function Navbar() {
     ReactGA4.event({
       category: "demo action",
       action: "demo",
-      lebel:'lebel demo',
+      label:'lebel demo',
       value:'1111 demo'
     });
   }
