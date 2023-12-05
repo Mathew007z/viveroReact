@@ -16,6 +16,14 @@ export function Navbar() {
       value:'xxxx'
     });
   }
+  const pruebaEvento = () => {
+    ReactGA4.event({
+      category: "demo action",
+      action: "demo",
+      lebel:'lebel demo',
+      value:'1111 demo'
+    });
+  }
   return (
     <>
       <div className="navbar">
@@ -31,7 +39,7 @@ export function Navbar() {
         </ul>
         <ul className="navbar-ul">
           <li>
-            <Link to="/nosotros" className="nav-link">
+            <Link to="/nosotros" className="nav-link" onClick={()=>pruebaEvento()}>
               Ejemplo
             </Link>
           </li>
